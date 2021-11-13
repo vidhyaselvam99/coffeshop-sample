@@ -1,0 +1,253 @@
+<html>
+<head>
+<title>
+My resturant page
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="sample/sampleproj.css"  type="text/css" /> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<script src='https://kit.fontawesome.com/d7b736dc44.js'></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<style>
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(90deg, rgba(18,18,23,1) 0%, rgba(27,27,54,1) 37%, rgba(80,72,72,1) 85%);
+    
+}
+
+body {
+    position: relative;
+  }
+  
+  body::after {
+    content: "";
+    background: url(images/hot-coffee-wallpaper-1024x768_18.jpg) no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+header
+{
+    overflow: hidden;
+    background-color:transparent;
+    
+ 
+   
+}
+#icon{
+    
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+    /* color:rgb(153, 42, 42); */
+    font-size: 44px;
+    height: 50px;
+    
+    }
+    
+
+
+ nav ul{ 
+    
+    float: left;
+    margin: 0px;
+    width:85%; 
+    height: 50px;
+    text-align: right;
+    list-style-type: none;
+}
+nav ul li {
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+   
+    
+    /* float:right; */
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight:700;
+    font-variant: small-caps;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#f5d07d;
+
+}
+nav ul li:hover{
+    background-color: #2b1a0f;
+    border-radius: 8px;
+    transition: 0.2ms;
+
+}
+
+#main{
+    margin-top: 50px;
+    display:inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    /* background-color: hotpink; */
+    clear: both;
+}
+
+#main_content h2{
+    font-family: "Lobster",cursive;
+
+    font-size: 44px;
+    /* text-shadow:whitesmoke 2px 2px 3px; */
+    color: white;
+    ;
+}
+#phrase{
+    color: whitesmoke;
+    font-size: 32px;
+    margin-top: 0px;
+    font-weight: 700;
+    font-family: 'Courgette', cursive;
+}
+
+.visible{
+    display: none;
+}
+.contact{
+    
+
+    display:flex;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;   
+    
+}
+.contact a i{
+    padding: 10px;
+    margin:0px 4px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+#whatsapp{
+    color:#25d366;
+    font-size: 30px;
+    
+}
+#twitter{
+    color:rgb(0, 232, 248);
+    font-size: 30px;
+}
+#instagram{
+    /* color:background: rgb(195,42,163); */
+    font-size: 30px;;
+    color: #b44665;
+}
+
+
+/* Media query
+---------------
+*/
+@media screen and (max-width:500px) {
+    #icon{
+      float: none;
+    }
+    nav ul {
+        /* clear: both; */
+        text-align: left;
+        height: max-content;
+        
+
+    }
+    nav ul li{
+        display: block;
+        width: max-content;
+    }
+    .fab{
+       display: block;
+    }
+
+
+
+   }
+</style>
+</head>
+<body>
+<header>
+ <div id="icon"><img src="https://img.icons8.com/fluent/48/000000/coffee-beans-.png"/>
+    <img src="https://img.icons8.com/office/40/000000/coffee--v1.png"/>
+ </div> 
+<nav>
+<ul>
+   <li> <a href="index.html" >Home</a></li>
+   <li><a href="Menu.html" target="_blank">Menu</a></li>
+   <li><a href="Order.html" target="_blank">OrderNow </a></li>
+   <li><a href="#contact" onclick="contactvisible()" ondblclick="invisible()">Contact Us</a></li>
+</ul>
+</nav>
+</header>
+<section id="main">
+  <!-- <div id="main_image">  <img src="https://static.parade.com/wp-content/uploads/2021/05/Semiya-Upma-Recipe-e1622646713756.jpg" width="300px" height="200px"> </div> -->
+ <div id="main_content"><h2>WELCOME TO CREST CAFE</h2>
+</div>
+<h2 id="phrase">Wake up your taste buds</h2>
+</section>
+
+<footer class="visible"  id="contact">
+<a><i id="whatsapp" class="fab fa-whatsapp-square"></i></a>
+<a><i id="twitter" class="fab fa-twitter"></i></a>
+<a><i id="instagram" class="fab fa-instagram-square"></i></a>
+
+</footer>
+<script>
+    function contactvisible(){
+   
+      var x=document.getElementsByClassName("visible")[0];
+      x.className="contact";
+    }
+    function invisible(){
+        var x=document.getElementById("contact");
+        x.className="visible";
+    }
+   
+   
+   </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

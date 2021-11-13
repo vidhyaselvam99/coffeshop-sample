@@ -1,0 +1,151 @@
+<html>
+<head>
+    <title>Order Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="sample/order.css">  -->
+
+    <style>
+
+body{
+    margin: 0px;
+    padding: 0px;
+    
+    position: relative;
+}
+body::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background-image: url(images/coffee_beans_coffee_surface_116750_1024x768.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    opacity: 0.9;
+}
+
+#order_section{
+
+    position:absolute;
+    z-index: 2;
+    width: 500px;
+    height: 400px;
+    border: 3px groove gray;
+    background-color:#fbdd9d;
+    border-radius: 0px 90px;
+    top: 15%;
+    left: 35%;
+}
+#order_form{
+    margin: 30px auto 0px;
+    width:max-content;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+input,textarea{
+    margin-left: 15px;
+}
+input[type="submit"]{
+    width: max-content;
+    margin-left: 100px;
+    font-size: 25px;
+    
+}
+
+#home img{
+    margin: 5px;
+    background-color: whitesmoke;
+    border: 3px solid black;
+    border-radius: 30%;
+}
+/* MEdia query */
+
+@media screen and (max-width:500px){
+    #order_section{
+        width: max-content;
+        margin: 0px auto;
+        top:0%;
+        left:5%;
+    }
+    #home img{
+        position: absolute;
+        bottom:0;
+    }
+}
+
+@media screen and (max-width:800px){
+    #order_section{
+        width: max-content;
+        top:0%;
+        left:3%;
+    }
+    #home img{
+        position: absolute;
+        bottom: 0;
+    }
+}
+    </style>
+</head>
+
+
+<body>
+    <div id="home">
+        <a href="/index.html"><img src="https://img.icons8.com/ios-glyphs/60/000000/home-page--v2.png"/></a>
+    </div>
+<div id="order_section">
+<form id="order_form">
+    <label>Name:<br><input type="text" name="username" id="text1"></label>
+    <br>
+    <label>Select Your item:<br><input list="itemlist" name="items" id="item"></label>
+    <datalist id="itemlist" size="5">
+        <option>Caffe</option>
+        <option>Red Eye</option>
+        <option>Caffe latte</option>
+        <option>Espresso</option>
+        <option>Flat white</option>
+        <option>Freak shake</option>
+        <option>Irish coffee</option>
+        <option>Iced Mocha</option>
+        <option>Iced latte</option>
+        <option>Cappucino</option>
+        <option>cold brew coffee</option>
+        <option>Double espresso</option>
+        <option>Frappe</option>
+        <option>Cold coffee</option>
+    </datalist>
+    <br>
+    <label>Quantity:<br><input type="number" step="1" min="1" max="60"></label><br>
+    <label>Address:<br>
+    <textarea cols="30" rows="4"></textarea></label>
+    <br>
+    <label>Payment Method:</label><br>
+   <label> <input type="radio" id="opt" name="pay">cash</label>
+    <label><input type="radio" name="pay">card</label>
+    <label><input type="radio" name="pay">Net banking</label><br>
+    <br>
+
+    <input type="submit" onclick="message()" value="Submit"/>
+</form>
+
+
+
+</div>
+<script>
+
+function message(){
+    alert("Your Order is placed successfully");
+}
+
+
+</script>
+
+
+
+
+
+</body>
+
+
+</html>
